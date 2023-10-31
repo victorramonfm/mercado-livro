@@ -1,0 +1,24 @@
+@startuml
+
+title Diagrama de classes do curso Kotlin e Spring do ZERO ao Avançado
+
+skinparam maxMessageSize 200
+skinparam WrapWidth 200
+
+class Controller
+note left: Classe responsável por receber requisições HTTP.
+
+class Service
+note left: Classe responsável por aplicar as regras de negócio.
+
+class BancoDeDados
+note left: Classe responsável por armazenar / acessar os dados.
+
+Controller --> Service
+Service --> BancoDeDados
+
+BancoDeDados ..> Service
+Service ..> Controller
+
+
+@enduml
