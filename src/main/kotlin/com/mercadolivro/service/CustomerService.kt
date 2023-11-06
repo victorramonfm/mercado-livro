@@ -5,6 +5,7 @@ import com.mercadolivro.enums.Errors
 import com.mercadolivro.exception.NotFoundException
 import com.mercadolivro.model.CustomerModel
 import com.mercadolivro.repository.CustomerRepository
+import com.mercadolivro.validation.EmailAvailable
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -63,5 +64,9 @@ class CustomerService(
         customer.status = CustomerStatus.INATIVO
 
         customerRepository.save(customer)
+    }
+
+    fun emailAvailable(email: String): Boolean {
+        return !customerRepository.existsByEmail(email)
     }
 }

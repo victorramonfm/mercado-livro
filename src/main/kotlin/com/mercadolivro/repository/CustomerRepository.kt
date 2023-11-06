@@ -6,8 +6,10 @@ import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.CrudRepository
 
-interface CustomerRepository: JpaRepository<CustomerModel, Int> {
+interface CustomerRepository : JpaRepository<CustomerModel, Int> {
 
     fun findByNameContaining(it: String, pageable: Pageable): Page<CustomerModel>
+
+    fun existsByEmail(email: String): Boolean
 
 }

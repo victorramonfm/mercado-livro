@@ -2,6 +2,6 @@ package com.mercadolivro.exception
 
 class BadRequestException(
     override val message: String,
-    val erroCode: String
+    val errorCode: String
 ) : Exception() {
 }
