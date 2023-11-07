@@ -38,8 +38,12 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
 	implementation("org.flywaydb:flyway-core:8.5.13")
 	implementation("org.flywaydb:flyway-mysql:8.5.13")
+
+	implementation("org.springdoc:springdoc-openapi-starter-common:2.2.0")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 
 	runtimeOnly("mysql:mysql-connector-java:8.0.29")
 

@@ -22,11 +22,17 @@ class BookController(
 ) {
 
     @GetMapping
-    fun findAll(@PageableDefault(page = 0, size = 10) pageable: Pageable): Page<BookResponse> =
+    fun findAll(
+        @PageableDefault(page = 0, size = 10)
+        pageable: Pageable
+    ): Page<BookResponse> =
         bookService.findAll(pageable).map { it.toResponse() }
 
     @GetMapping("/active")
-    fun findAllActive(@PageableDefault(page = 0, size = 10) pageable: Pageable): Page<BookResponse> =
+    fun findAllActive(
+        @PageableDefault(page = 0, size = 10)
+        pageable: Pageable
+    ): Page<BookResponse> =
         bookService.findAllActive(pageable).map { it.toResponse() }
 
     @GetMapping("/{id}")
