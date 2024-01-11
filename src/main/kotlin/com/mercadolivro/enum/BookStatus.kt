@@ -1,4 +1,4 @@
-package com.mercadolivro.enums
+package com.mercadolivro.enum
 
 enum class BookStatus {
     ATIVO,

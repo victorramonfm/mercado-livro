@@ -5,16 +5,19 @@ import com.mercadolivro.controller.request.PutCustomerRequest
 import com.mercadolivro.controller.response.CustomerResponse
 import com.mercadolivro.extension.toCustomerModel
 import com.mercadolivro.extension.toResponse
+import com.mercadolivro.security.UserCanOnlyAccessTheirOwnResource
 import com.mercadolivro.service.CustomerService
 import jakarta.validation.Valid
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("customer")
+@EnableMethodSecurity(prePostEnabled = true)
 class CostumerController(
     val customerService: CustomerService,
 ) {
@@ -26,6 +29,7 @@ class CostumerController(
     ): Page<CustomerResponse> = customerService.findByName(name, pageable).map { it.toResponse() }
 
     @GetMapping("/{id}")
+    @UserCanOnlyAccessTheirOwnResource
     fun findById(
         @PathVariable(name = "id") id: Int,
     ): CustomerResponse = customerService.findById(id).toResponse()

@@ -2,10 +2,9 @@ package com.mercadolivro.exception
 
 import com.mercadolivro.controller.response.ErrorResponse
 import com.mercadolivro.controller.response.FieldErrorResponse
-import com.mercadolivro.enums.Errors
+import com.mercadolivro.enum.Errors
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.validation.FieldError
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -62,6 +61,21 @@ class ControllerAdvice {
         )
 
         return ResponseEntity(error, HttpStatus.BAD_REQUEST)
+    }
+
+    @ExceptionHandler(AccessDeniedException::class)
+    fun handleAccessDeniedException(
+        ex: AccessDeniedException,
+        request: WebRequest
+    ): ResponseEntity<ErrorResponse> {
+        val error = ErrorResponse(
+            HttpStatus.FORBIDDEN.value(),
+            Errors.ML000.message,
+            Errors.ML000.code,
+            null
+        )
+
+        return ResponseEntity(error, HttpStatus.NOT_FOUND)
     }
 
 }
