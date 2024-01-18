@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="315c3a3e-3d8e-430b-9b34-47bd30b5e580" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/config/SecurityConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/PurchaseController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/mapper/PurchaseMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/request/PostPurchaseRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enum/Profile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/event/PurchaseEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/event/listener/GenerateNfeListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/event/listener/UpdateSoldBookListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/model/PurchaseModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/repository/PurchaseRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/service/PurchaseService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V202311090907__create_table_purchase_and_purchase_book.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V202312060820__add_password_at_customer.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V202312060839__create_table_roles.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/response/PageResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prd.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/controller/CostumerControllerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/event/listener/GenerateNfeListenerTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/helper/ModelBuilderHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/repository/CustomerRepositoryTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/service/CustomerServiceTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/mercadolivro/service/PurchaseServiceTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
@@ -32,20 +28,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/br/gb/tech/settlement/infra/config/swagger/OpenApiConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/MercadoLivroApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/MercadoLivroApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/MercadoLivroApplicationKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/MercadoLivroApplicationKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/request/PostCustomerRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/request/PostCustomerRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/response/BookResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/response/BookResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/response/CustomerResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/response/CustomerResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/enums/BookStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/enums/CustomerStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/enums/Errors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/exception/ControllerAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/exception/ControllerAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController$findAll$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController$findAll$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController$findAllActive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController$findAllActive$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/CostumerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/controller/CostumerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/extension/ConverterExtensionFunctionKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/extension/ConverterExtensionFunctionKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/model/BookModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/model/BookModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/model/CustomerModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/model/CustomerModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/repository/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/repository/BookRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/service/BookService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/mercadolivro/service/CustomerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
@@ -120,20 +107,18 @@
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/cacheable/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/local-state/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/MercadoLivroApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/MercadoLivroApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/request/PostCustomerRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/request/PostCustomerRequest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/response/BookResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/response/BookResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/response/CustomerResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/response/CustomerResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enums/BookStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enum/BookStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enums/CustomerStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enum/CustomerStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enums/Errors.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/enum/Errors.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/exception/ControllerAdvice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/exception/ControllerAdvice.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/config/SecurityConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/config/SwaggerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/config/SwaggerConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/AdminController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/AdminController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/BookController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/BookController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/CostumerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/CostumerController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/PurchaseController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/controller/PurchaseController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/extension/ConverterExtensionFunction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/extension/ConverterExtensionFunction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/model/BookModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/model/BookModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/model/CustomerModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/model/CustomerModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/repository/BookRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/repository/BookRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/repository/CustomerRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/repository/CustomerRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/service/BookService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/service/BookService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/service/CustomerService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/mercadolivro/service/CustomerService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +138,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mercado-livro" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mercado-livro" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mercado-livro" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -167,6 +168,7 @@
         <option value="Class" />
         <option value="Kotlin Enum" />
         <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -188,21 +190,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/victor/Dev/techBoost/mercado-livro/src/main/resources/db/migration&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.Build mercado-livro.executor": "Run",
+    "Gradle.CostumerControllerTest.should return all customers.executor": "Run",
+    "Gradle.CustomerRepositoryTest.executor": "Run",
+    "Gradle.CustomerRepositoryTest.should return name containing.executor": "Run",
+    "Gradle.CustomerServiceTest.should create customer and encrypt password.executor": "Run",
+    "Gradle.CustomerServiceTest.should delete customer.executor": "Run",
+    "Gradle.CustomerServiceTest.should return all customers.executor": "Run",
+    "Gradle.CustomerServiceTest.should return customer by id.executor": "Run",
+    "Gradle.CustomerServiceTest.should return customers when name is informed.executor": "Run",
+    "Gradle.CustomerServiceTest.should returne false when email available.executor": "Run",
+    "Gradle.CustomerServiceTest.should returne true when email available.executor": "Run",
+    "Gradle.CustomerServiceTest.should throw exception when not found a customer by id.executor": "Run",
+    "Gradle.CustomerServiceTest.should throw not found exception when delete customer.executor": "Run",
+    "Gradle.CustomerServiceTest.should throw nout found exception when update customer.executor": "Run",
+    "Gradle.CustomerServiceTest.should update customer.executor": "Run",
+    "Gradle.GenerateNfeListenerTest.executor": "Run",
+    "Gradle.PurchaseServiceTest.executor": "Run",
+    "Gradle.mercado-livro [check].executor": "Run",
+    "Gradle.mercado-livro [clean].executor": "Run",
+    "Gradle.mercado-livro [jacocoTestCoverageVerification].executor": "Run",
+    "Gradle.mercado-livro [jacocoTestReport].executor": "Run",
+    "Kotlin.MercadoLivroApplicationKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "corretto-19",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/victor/Dev/techBoost/mercado-livro/src/test/resources",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="com.mercadolivro.repository" />
@@ -211,6 +244,11 @@
       <recent name="com.mercadolivro.validation" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.mercadolivro.event.listener" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.mercadolivro.controller" />
+      <recent name="com.mercadolivro.service" />
       <recent name="com.mercadolivro.event.listener" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -222,8 +260,8 @@
       <command value="gradle clean" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.MercadoLivroApplicationKt">
-    <configuration name="mercado-livro [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CostumerControllerTest.should return all customers">
+    <configuration name="CostumerControllerTest.should return all customers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -234,38 +272,138 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mercadolivro.controller.CostumerControllerTest.should return all customers&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MercadoLivroApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="SPRING_PROFILES_ACTIVE" value="local" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="com.mercadolivro.MercadoLivroApplicationKt" />
-      <module name="mercado-livro.main" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="CustomerRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mercadolivro.repository.CustomerRepositoryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomerRepositoryTest.should return name containing" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mercadolivro.repository.CustomerRepositoryTest.should return name containing&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GenerateNfeListenerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mercadolivro.event.listener.GenerateNfeListenerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PurchaseServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.mercadolivro.service.PurchaseServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.mercado-livro [clean]" />
-      <item itemvalue="Kotlin.MercadoLivroApplicationKt" />
+      <item itemvalue="Gradle.CostumerControllerTest.should return all customers" />
+      <item itemvalue="Gradle.CustomerRepositoryTest" />
+      <item itemvalue="Gradle.CustomerRepositoryTest.should return name containing" />
+      <item itemvalue="Gradle.GenerateNfeListenerTest" />
+      <item itemvalue="Gradle.PurchaseServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MercadoLivroApplicationKt" />
-        <item itemvalue="Gradle.mercado-livro [clean]" />
+        <item itemvalue="Gradle.CostumerControllerTest.should return all customers" />
+        <item itemvalue="Gradle.CustomerRepositoryTest" />
+        <item itemvalue="Gradle.CustomerRepositoryTest.should return name containing" />
+        <item itemvalue="Gradle.GenerateNfeListenerTest" />
+        <item itemvalue="Gradle.PurchaseServiceTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-6ca9ab15" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

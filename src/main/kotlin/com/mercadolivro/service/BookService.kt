@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class BookService(
-    val bookRepository: BookRepository
+    private val bookRepository: BookRepository
 ) {
     fun findAll(pageable: Pageable): Page<BookModel> = bookRepository.findAll(pageable)
 

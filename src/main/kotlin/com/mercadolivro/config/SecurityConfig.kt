@@ -36,7 +36,11 @@ class SecurityConfig(
     private val PUBLIC_MATCHERS = arrayOf<String>()
 
     private val PUBLIC_POST_MATCHERS = arrayOf(
-        "/customer"
+        "/customers"
+    )
+
+    private val PUBLIC_GET_MATCHERS = arrayOf(
+        "/books"
     )
 
     private val ADMIN_MATCHERS = arrayOf(
@@ -47,49 +51,50 @@ class SecurityConfig(
         auth.userDetailsService(userDetails).passwordEncoder(bCryptPasswordEncoder())
     }
 
-//    @Bean
-//    fun configure(http: HttpSecurity): SecurityFilterChain {
-//        http
-//            .authorizeHttpRequests { authz ->
-//                authz
-//                    .requestMatchers(*PUBLIC_MATCHERS).permitAll()
-//                    .requestMatchers(HttpMethod.POST, *PUBLIC_POST_MATCHERS).permitAll()
-//                    .requestMatchers(*ADMIN_MATCHERS).hasAuthority(Role.ADMIN.description)
-//                    .anyRequest().authenticated()
-//            }
-//            .addFilter(AuthenticationFilter(authenticationManager(), customerRepository, jwtUtil))
-//            .addFilter(AuthorizationFilter(authenticationManager(), userDetails, jwtUtil))
-//            .exceptionHandling { auth ->
-//                auth
-//                    .authenticationEntryPoint(customEntryPoint)
-//            }
-//
-//        return http.build()
-//    }
+    @Bean
+    fun configure(http: HttpSecurity): SecurityFilterChain {
+        http
+            .authorizeHttpRequests { authz ->
+                authz
+                    .requestMatchers(*PUBLIC_MATCHERS).permitAll()
+                    .requestMatchers(HttpMethod.POST, *PUBLIC_POST_MATCHERS).permitAll()
+                    .requestMatchers(HttpMethod.GET, *PUBLIC_GET_MATCHERS).permitAll()
+                    .requestMatchers(*ADMIN_MATCHERS).hasAuthority(Role.ADMIN.description)
+                    .anyRequest().authenticated()
+            }
+            .addFilter(AuthenticationFilter(authenticationManager(), customerRepository, jwtUtil))
+            .addFilter(AuthorizationFilter(authenticationManager(), userDetails, jwtUtil))
+            .exceptionHandling { auth ->
+                auth
+                    .authenticationEntryPoint(customEntryPoint)
+            }
 
-//    @Bean
-//    fun configure(web: WebSecurity){
-//        web.ignoring().requestMatchers(
-//            "/v2/api-docs",
-//            "/configuration/ui",
-//            "/swagger-resources/**",
-//            "/configuration/**",
-//            "/swagger-ui.html",
-//            "/webjars/**"
-//        )
-//    }
+        return http.build()
+    }
 
-//    @Bean
-//    fun corsConfig(): CorsFilter {
-//        val source = UrlBasedCorsConfigurationSource()
-//        val config = CorsConfiguration()
-//        config.allowCredentials = true
-//        config.addAllowedOrigin("*")
-//        config.addAllowedHeader("*")
-//        config.addAllowedMethod("*")
-//        source.registerCorsConfiguration("/**", config)
-//        return CorsFilter(source)
-//    }
+    @Bean
+    fun configure(web: WebSecurity){
+        web.ignoring().requestMatchers(
+            "/v2/api-docs",
+            "/configuration/ui",
+            "/swagger-resources/**",
+            "/configuration/**",
+            "/swagger-ui.html",
+            "/webjars/**"
+        )
+    }
+
+    @Bean
+    fun corsConfig(): CorsFilter {
+        val source = UrlBasedCorsConfigurationSource()
+        val config = CorsConfiguration()
+        config.allowCredentials = true
+        config.addAllowedOriginPattern("*")
+        config.addAllowedHeader("*")
+        config.addAllowedMethod("*")
+        source.registerCorsConfiguration("/**", config)
+        return CorsFilter(source)
+    }
 
     @Bean
     @Throws(Exception::class)

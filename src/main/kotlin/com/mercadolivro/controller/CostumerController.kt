@@ -16,17 +16,17 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("customer")
+@RequestMapping("customers")
 @EnableMethodSecurity(prePostEnabled = true)
 class CostumerController(
-    val customerService: CustomerService,
+    private val customerService: CustomerService,
 ) {
 
     @GetMapping
     fun findByName(
         @RequestParam name: String?,
         @PageableDefault(page = 0, size = 10) pageable: Pageable
-    ): Page<CustomerResponse> = customerService.findByName(name, pageable).map { it.toResponse() }
+    ): Page<CustomerResponse> = customerService.getAll(name, pageable).map { it.toResponse() }
 
     @GetMapping("/{id}")
     @UserCanOnlyAccessTheirOwnResource

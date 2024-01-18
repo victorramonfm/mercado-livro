@@ -17,7 +17,7 @@ class CustomerService(
     private val bookService: BookService,
     private val bCrypt: BCryptPasswordEncoder
 ) {
-    fun findByName(
+    fun getAll(
         name: String?,
         pageable: Pageable,
     ): Page<CustomerModel> {
@@ -55,7 +55,10 @@ class CustomerService(
         customer: CustomerModel,
     ) {
         if (!customerRepository.existsById(customer.id!!)) {
-            throw Exception()
+            throw NotFoundException(
+                Errors.ML201.message.format(customer.id),
+                Errors.ML201.code
+            )
         }
 
         customerRepository.save(customer)
